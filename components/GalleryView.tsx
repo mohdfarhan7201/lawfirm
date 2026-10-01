@@ -157,8 +157,17 @@ export default function GalleryView() {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
+                role="button"
+                tabIndex={0}
+                aria-label={`Open photo lightbox: ${item.title}`}
                 onClick={() => openLightbox(item)}
-                className="gallery-card group cursor-pointer bg-[#FFFFFF] rounded-2xl overflow-hidden border border-[#E3DACD] shadow-sm hover:shadow-xl hover:border-[#9C7348]/50 transition-all duration-300 flex flex-col"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    openLightbox(item);
+                  }
+                }}
+                className="gallery-card group cursor-pointer bg-[#FFFFFF] rounded-2xl overflow-hidden border border-[#E3DACD] shadow-sm hover:shadow-xl hover:border-[#9C7348]/50 transition-all duration-300 flex flex-col focus:outline-none focus:ring-2 focus:ring-[#9C7348]"
               >
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] sm:aspect-[4/3] overflow-hidden bg-[#EFEBE4]">
