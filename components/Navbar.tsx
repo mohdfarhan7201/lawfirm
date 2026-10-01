@@ -16,6 +16,7 @@ const navLinks = [
   { href: "/practice-areas", label: "Practice Areas" },
   { href: "/experience", label: "Experience" },
   { href: "/achievements", label: "Achievements" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -92,7 +93,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-baseline gap-1">
               <span className="font-serif text-xl md:text-2xl font-semibold tracking-tight text-[#2A1E17] transition-colors">
-                Adv. Arjun Sharma
+                {lawyerConfig.personal.fullName}
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#9C7348] translate-y-[-2px]" />
             </div>

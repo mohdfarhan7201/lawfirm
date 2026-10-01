@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     // TODO: Connect to email dispatch service (e.g. Resend, Nodemailer, SendGrid)
     // Example:
     // await resend.emails.send({
-    //   from: 'chambers@adv-arjunsharma.legal',
+    //   from: 'chambers@adv-armanashrafi.legal',
     //   to: lawyerConfig.personal.email,
     //   subject: `New Legal Inquiry: ${subject} - ${name}`,
     //   text: `From: ${name} (${phone}, ${email})\n\n${message}`

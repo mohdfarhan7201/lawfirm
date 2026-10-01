@@ -111,7 +111,7 @@ export default function AboutPreview() {
           {/* Left Column: Editorial Text (Clean & Authoritative) */}
           <div ref={textColRef} className="lg:col-span-6 flex flex-col items-start">
             <SectionHeading
-              eyebrow="ABOUT ADV. ARJUN SHARMA"
+              eyebrow={`ABOUT ${lawyerConfig.personal.fullName.toUpperCase()}`}
               title="Driven By Strategy, Grounded In Integrity"
               subtitle="Providing principled legal representation and strategic counsel across high-stakes court matters."
               theme="light"

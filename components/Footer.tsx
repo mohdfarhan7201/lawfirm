@@ -72,9 +72,9 @@ export default function Footer() {
       {/* Giant Ghost Watermark in Background */}
       <div
         ref={watermarkRef}
-        className="absolute -bottom-10 left-1/2 -translate-x-1/2 select-none pointer-events-none text-[90px] sm:text-[140px] md:text-[180px] lg:text-[220px] font-serif font-black text-[#281C15] tracking-[0.14em] uppercase leading-none z-0 whitespace-nowrap"
+        className="absolute -bottom-10 left-1/2 -translate-x-1/2 select-none pointer-events-none text-[80px] sm:text-[120px] md:text-[160px] lg:text-[200px] font-serif font-black text-[#281C15] tracking-[0.14em] uppercase leading-none z-0 whitespace-nowrap"
       >
-        ARJUN SHARMA
+        ARMAN ASHRAFI
       </div>
 
       <div className="container-custom relative z-10">
@@ -152,6 +152,11 @@ export default function Footer() {
               <li>
                 <Link href="/achievements" className="hover:text-[#9C7348] transition-colors inline-block py-0.5">
                   Achievements
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="hover:text-[#9C7348] transition-colors inline-block py-0.5">
+                  Photo Gallery
                 </Link>
               </li>
               <li>

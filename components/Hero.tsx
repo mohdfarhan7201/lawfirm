@@ -223,7 +223,7 @@ export default function Hero() {
           >
             <Image
               src="/images/lady-justice.jpg"
-              alt="Lady Justice Bronze Sculpture - Chambers of Adv. Arjun Sharma"
+              alt="Lady Justice Bronze Sculpture - Chambers of Adv. Arman Ashrafi"
               fill
               priority
               sizes="(max-width: 768px) 280px, 400px"

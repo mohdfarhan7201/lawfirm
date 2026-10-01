@@ -8,7 +8,7 @@ import { Phone, Mail, MapPin, Clock, AlertTriangle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Get In Touch | Chamber Consultation & Legal Inquiries",
   description:
-    "Contact Adv. Arjun Sharma for professional legal consultation, case assessment, and court representation before the High Court and District Courts.",
+    "Contact Adv. Arman Ashrafi for professional legal consultation, criminal trial defense, bail assessment, and legal aid representation in Saran (Chapra) and Patna.",
 };
 
 export default function ContactPage() {

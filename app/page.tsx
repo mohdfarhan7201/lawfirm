@@ -137,7 +137,7 @@ export default function HomePage() {
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#2A1E17] mb-4 leading-tight">
-              Schedule A Consultation With Adv. Arjun Sharma
+              Schedule A Consultation With {lawyerConfig.personal.fullName}
             </h2>
 
             <p className="text-xs sm:text-sm text-[#66584F] leading-relaxed mb-8 max-w-xl font-normal">

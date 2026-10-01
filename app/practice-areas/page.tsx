@@ -6,9 +6,9 @@ import Button from "@/components/Button";
 import { lawyerConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Practice Areas | Criminal, Civil & Constitutional Law",
+  title: "Practice Areas | Criminal Defense, Bail & Civil Disputes",
   description:
-    "Explore the areas of legal practice represented by Adv. Arjun Sharma, including Criminal Defense, Civil Disputes, Constitutional Writ Petitions, Service Matters, and Corporate Advisory.",
+    "Explore the areas of legal practice represented by Adv. Arman Ashrafi, including Criminal Trial Defense, Section 498A Dowry Defense, Civil & Property Suits, Legal Aid, and Matrimonial Law.",
 };
 
 export default function PracticeAreasPage() {

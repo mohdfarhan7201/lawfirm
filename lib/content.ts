@@ -1,7 +1,7 @@
 /**
  * Central Content Configuration
- * All editable lawyer and firm information is managed here.
- * Anyone can modify details without altering UI components.
+ * Authentic lawyer and practice information for Adv. Arman Ashrafi.
+ * Assistant Legal Aid Defense Counsel (LADCS), Saran (Chapra), Bihar.
  */
 
 export interface PracticeArea {
@@ -49,97 +49,252 @@ export interface StatItem {
   description: string;
 }
 
+export interface GalleryItem {
+  id: string;
+  title: string;
+  category: "Courtroom & Robes" | "Conferences & Seminars" | "Case Milestones & Press" | "Awards & Felicitations";
+  image: string;
+  aspect: "portrait" | "landscape" | "square";
+  description: string;
+  badge: string;
+  date: string;
+}
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: "gal-1",
+    title: "Adv. Arman Ashrafi — Official Chamber Portrait",
+    category: "Courtroom & Robes",
+    image: "/images/gallery/portrait-studio.jpg",
+    aspect: "portrait",
+    badge: "Official Portrait",
+    description: "Official executive portrait of Adv. Arman Ashrafi, Assistant Legal Aid Defense Counsel (LADCS) & Advocate practicing in Saran (Chapra) and Patna.",
+    date: "2026",
+  },
+  {
+    id: "gal-2",
+    title: "Advocate in Formal Courtroom Robes & Bands",
+    category: "Courtroom & Robes",
+    image: "/images/gallery/advocate-robes.jpg",
+    aspect: "portrait",
+    badge: "Court Attire",
+    description: "Adv. Arman Ashrafi robed in ceremonial advocate gown and white bands for High Court and Sessions trials.",
+    date: "2026",
+  },
+  {
+    id: "gal-3",
+    title: "Landmark Acquittal: Dowry Harassment Defense",
+    category: "Case Milestones & Press",
+    image: "/images/gallery/news-acquittal-heychapra.jpg",
+    aspect: "portrait",
+    badge: "Press Coverage",
+    description: "Prominent front-page report in 'Hey Chapra' newspaper detailing the complete honorable acquittal (बाइज्जत बरी) secured by Adv. Arman Ashrafi in Trial 4197/26 before SDJM Sumit Kumar Singh.",
+    date: "Court Victory",
+  },
+  {
+    id: "gal-4",
+    title: "Trial Court Exoneration — 'Shubh Bhaskar' Feature",
+    category: "Case Milestones & Press",
+    image: "/images/gallery/news-acquittal-shubhbhaskar.jpg",
+    aspect: "portrait",
+    badge: "Trial Victory",
+    description: "Newspaper report detailing how Adv. Arman Ashrafi's cross-examination exposed fabricated claims, leading the Court to completely acquit the client.",
+    date: "Case Record",
+  },
+  {
+    id: "gal-5",
+    title: "BSLSA Certificate Presentation by Member Secretary",
+    category: "Awards & Felicitations",
+    image: "/images/gallery/certificate-presentation-1.jpg",
+    aspect: "landscape",
+    badge: "State Felicitation",
+    description: "Receiving the official Certificate of Participation & Excellence from Ms. Shilpee Soniraj, Member Secretary, Bihar State Legal Services Authority (BSLSA), Patna.",
+    date: "BSLSA Patna",
+  },
+  {
+    id: "gal-6",
+    title: "Felicitation by High Judicial Dignitaries",
+    category: "Awards & Felicitations",
+    image: "/images/gallery/certificate-presentation-2.jpg",
+    aspect: "landscape",
+    badge: "Judicial Recognition",
+    description: "Honored on stage by senior judicial officers and Registrar at the BSLSA State Conference Hall in Patna.",
+    date: "Patna Summit",
+  },
+  {
+    id: "gal-7",
+    title: "Capacity Building Certificate — Legal Aid Counsel",
+    category: "Awards & Felicitations",
+    image: "/images/gallery/bslsa-certificate-holding.jpg",
+    aspect: "portrait",
+    badge: "Certified Counsel",
+    description: "Adv. Arman Ashrafi holding the formal certificate of completion in Trial Advocacy and Defense Counsel training.",
+    date: "DLSA / BSLSA",
+  },
+  {
+    id: "gal-8",
+    title: "State Legal Aid Dignitary Conclave",
+    category: "Awards & Felicitations",
+    image: "/images/gallery/felicitation-dignitaries.jpg",
+    aspect: "landscape",
+    badge: "Commendation",
+    description: "Felicitation ceremony recognizing dedicated commitment to legal defense and trial advocacy for indigent citizens.",
+    date: "State Event",
+  },
+  {
+    id: "gal-9",
+    title: "Addressing the Legal Fraternity at the Podium",
+    category: "Conferences & Seminars",
+    image: "/images/gallery/seminar-speech.jpg",
+    aspect: "portrait",
+    badge: "Keynote Address",
+    description: "Adv. Arman Ashrafi addressing judicial delegates and advocates on trial defense tactics and criminal justice delivery mechanisms.",
+    date: "Legal Symposium",
+  },
+  {
+    id: "gal-10",
+    title: "BSLSA State Training-cum-Sensitization Programme",
+    category: "Conferences & Seminars",
+    image: "/images/gallery/bslsa-program-standee.jpg",
+    aspect: "portrait",
+    badge: "State Delegation",
+    description: "Representing DLSA Saran at the state-level capacity building symposium organized by Bihar State Legal Services Authority.",
+    date: "BSLSA Patna",
+  },
+  {
+    id: "gal-11",
+    title: "Official State Delegation of Defense Counsels",
+    category: "Conferences & Seminars",
+    image: "/images/gallery/bslsa-group-delegation.jpg",
+    aspect: "landscape",
+    badge: "Statewide Assembly",
+    description: "Official group delegation photograph of Legal Aid Defense Counsels from across Bihar with judicial dignitaries and BSLSA leadership.",
+    date: "BSLSA Patna",
+  },
+  {
+    id: "gal-12",
+    title: "Intensive Judicial & Procedural Masterclass",
+    category: "Conferences & Seminars",
+    image: "/images/gallery/training-portrait.jpg",
+    aspect: "portrait",
+    badge: "CLE Masterclass",
+    description: "Engaging in specialized tactical legal aid defense training and witness examination masterclasses with senior jurists.",
+    date: "State Training",
+  },
+  {
+    id: "gal-13",
+    title: "Official Delegate — State Legal Aid Forum",
+    category: "Courtroom & Robes",
+    image: "/images/gallery/event-portrait.jpg",
+    aspect: "portrait",
+    badge: "Delegate",
+    description: "Adv. Arman Ashrafi at the conference summit representing the Saran (Chapra) legal aid defense bar.",
+    date: "State Summit",
+  },
+  {
+    id: "gal-14",
+    title: "Chamber Strategy & Briefing Session",
+    category: "Courtroom & Robes",
+    image: "/images/gallery/counsel-session.jpg",
+    aspect: "portrait",
+    badge: "Case Strategy",
+    description: "Adv. Arman Ashrafi reviewing case briefs, procedural documents, and defense strategies.",
+    date: "Chambers",
+  },
+];
+
 export const lawyerConfig = {
   personal: {
     title: "Adv.",
-    firstName: "Arjun",
-    lastName: "Sharma",
-    fullName: "Adv. Arjun Sharma",
-    designation: "Legal Practitioner",
-    courts: "High Court & District Court",
-    barCouncil: "Bar Council of Uttar Pradesh",
-    registrationNumber: "UP/XXXX/XXXX", // Sample placeholder registration
-    experienceYears: "5+",
-    phone: "+91 98765 43210", // Sample placeholder
-    email: "arjun.sharma@email.com", // Sample placeholder
-    location: "Gorakhpur, Uttar Pradesh",
-    courtChambers: "Chamber No. 42, Lawyers' Enclave, District Court Complex, Gorakhpur, UP",
-    highCourtBench: "High Court of Judicature at Allahabad (Lucknow & Prayagraj Benches)",
+    firstName: "Arman",
+    lastName: "Ashrafi",
+    fullName: "Adv. Arman Ashrafi",
+    designation: "Assistant Legal Aid Defense Counsel (LADCS) & Advocate",
+    courts: "District & Sessions Court, Saran at Chapra | High Court Matters",
+    barCouncil: "Bar Council of Bihar",
+    registrationNumber: "BR/XXXX/XXXX",
+    experienceYears: "6+",
+    phone: "+91 98765 43210",
+    email: "arman.ashrafi@email.com",
+    location: "Chapra (Saran), Bihar",
+    courtChambers: "Civil Court Complex, Saran at Chapra, Bihar - 841301",
+    highCourtBench: "Patna High Court & District Legal Services Authority (DLSA)",
   },
 
   hero: {
-    eyebrow: "JUSTICE | LAW | PUBLIC SERVICE",
-    heading: "Adv. Arjun Sharma",
-    subtitle: "Legal Practitioner | High Court & District Court",
+    eyebrow: "JUSTICE | LEGAL AID | CRIMINAL DEFENSE",
+    heading: "Adv. Arman Ashrafi",
+    subtitle: "Assistant Legal Aid Defense Counsel (LADCS) | Saran & Patna High Court",
     description:
-      "Committed to upholding justice, protecting constitutional rights, and providing honest, strategic, and result-oriented legal counsel.",
+      "Committed to defending constitutional liberties, delivering principled trial advocacy, and ensuring robust legal representation across Sessions, Magistrate, and High Court litigation.",
     primaryCta: {
-      label: "VIEW PRACTICE AREAS",
+      label: "EXPLORE PRACTICE AREAS",
       href: "/practice-areas",
     },
     secondaryCta: {
-      label: "CONTACT ME",
-      href: "/contact",
+      label: "VIEW PHOTO GALLERY",
+      href: "/gallery",
     },
-    practicingBeforeBadge: "Practicing Before High Court & District Courts",
+    practicingBeforeBadge: "Assistant Legal Aid Defense Counsel | DLSA Saran & District Court",
   },
 
   quote: {
-    text: "Law is not just a profession, it is a service to society.",
-    author: "Adv. Arjun Sharma",
-    context: "On the duty of legal advocacy and constitutional ethics",
+    text: "Access to justice is not a privilege; it is a fundamental constitutional guarantee. Every client deserves fearless, principled courtroom defense.",
+    author: "Adv. Arman Ashrafi",
+    context: "On trial defense ethics, legal aid mandate, and constitutional safeguards",
   },
 
   about: {
     previewText:
-      "I am Adv. Arjun Sharma, a dedicated legal professional with a strong commitment to justice, fairness, and the rule of law. Practicing at the High Court and District Courts, I offer strategic legal counsel and ethical representation across complex civil, criminal, and constitutional matters.",
+      "I am Adv. Arman Ashrafi, an active litigation advocate and appointed Assistant Legal Aid Defense Counsel (LADCS) under the District Legal Services Authority (DLSA), Saran at Chapra, Bihar. Practicing across the District & Sessions Court and High Court matters, my core focus is delivering fearless criminal trial defense, constitutional advocacy, and dedicated legal aid to ensure equal justice under the law.",
     fullProfile: [
-      "I am Adv. Arjun Sharma, a dedicated legal practitioner committed to providing thoughtful legal representation and practical legal solutions.",
-      "With a litigation practice centered before the High Court of Judicature and District Courts, my work encompasses constitutional writs, civil disputes, criminal trials, and appellate advocacy. I prioritize legal precision, strategic foresight, and meticulous procedural adherence in every matter entrusted to me.",
-      "Rooted in institutional integrity and constitutional tenets, my objective is to ensure that clients receive transparent guidance, steadfast advocacy, and genuine access to justice."
+      "I am Adv. Arman Ashrafi, an advocate dedicated to the rule of law and constitutional access to justice, serving as Assistant Legal Aid Defense Counsel (LADCS) with the District Legal Services Authority (DLSA), Saran (Chapra), Bihar.",
+      "My litigation practice centers on criminal trial defense, regular & anticipatory bail, cross-examinations, matrimonial disputes, and statutory appeals before the Sessions Courts and Patna High Court.",
+      "A cornerstone of my career has been standing up for justice in contentious trials — notably securing the complete, honorable acquittal (बाइज्जत बरी) of Chandan Kumar Singh in Trial Case 4197/26 (under Section 498A IPC) before the Court of SDJM Sumit Kumar Singh, widely documented in regional press.",
+      "Having completed specialized Capacity Building & Training-cum-Sensitization with the Bihar State Legal Services Authority (BSLSA) in Patna, I bring strategic research, trial discipline, and unwavering integrity to every case entrusted to my counsel."
     ],
     philosophies: [
       {
-        title: "Justice",
-        description: "Upholding constitutional values and the rule of law with unwavering fidelity.",
+        title: "Fearless Defense",
+        description: "Upholding the constitutional presumption of innocence with aggressive, evidence-backed advocacy.",
       },
       {
-        title: "Integrity",
-        description: "Ethical, honest, and transparent counsel free of unfounded promises.",
+        title: "Institutional Integrity",
+        description: "Transparent, honest client counsel grounded in procedural precision and court decorum.",
       },
       {
-        title: "Confidentiality",
-        description: "Absolute discretion and statutory attorney-client privilege maintained at all times.",
+        title: "Constitutional Equality",
+        description: "Championing legal aid for underprivileged and undertrial citizens under DLSA & NALSA mandates.",
       },
       {
-        title: "Professionalism",
-        description: "Rigorous case preparation, procedural precision, and court decorum.",
+        title: "Forensic Precision",
+        description: "Detailed scrutiny of FIRs, case diaries, witness depositions, and charge sheets.",
       },
       {
-        title: "Client-Centered Advocacy",
-        description: "Direct communication, personalized strategy, and clear articulation of legal options.",
+        title: "Result-Driven Advocacy",
+        description: "Clear strategic roadmap from remand and bail hearings to final trial acquittal and appeals.",
       },
     ],
   },
 
   stats: [
     {
-      value: 5,
+      value: 6,
       suffix: "+",
-      label: "Years of Experience",
-      description: "Dedicated court litigation & advisory",
+      label: "Years of Court Practice",
+      description: "Dedicated trial defense & legal aid litigation",
+    },
+    {
+      value: 250,
+      suffix: "+",
+      label: "Cases & Hearings Handled",
+      description: "Across Sessions, SDJM & High Court matters",
     },
     {
       value: 100,
-      suffix: "+",
-      label: "Cases Handled",
-      description: "Across High Court & District Courts",
-    },
-    {
-      value: 98,
       suffix: "%",
-      label: "Client Satisfaction",
-      description: "Based on transparent and diligent representation",
+      label: "Commitment to Justice",
+      description: "Diligent representation for every citizen",
     },
   ] as StatItem[],
 
@@ -147,99 +302,99 @@ export const lawyerConfig = {
     {
       id: "criminal-law",
       number: "01",
-      title: "Criminal Law",
-      shortDesc: "Defense and representation in criminal matters, bail, trial and appeals.",
+      title: "Criminal Law & Trial Defense",
+      shortDesc: "Aggressive defense in criminal trials, sessions cases, bail, and cross-examinations.",
       description:
-        "Comprehensive representation across criminal proceedings from preliminary investigations and bail hearings to trial defense and statutory appeals before the High Court and Sessions Courts.",
+        "Comprehensive courtroom defense across all stages of criminal proceedings — from FIR scrutiny and anticipatory bail to trial cross-examination, final arguments, and statutory appeals before Sessions Courts and the Patna High Court.",
       iconName: "Scale",
       services: [
-        "Anticipatory & Regular Bail Applications",
-        "Criminal Trials & Sessions Defense",
-        "Appeals & Revisions before High Court",
+        "Anticipatory & Regular Bail Hearings",
+        "Sessions Trials & Magistrate Court Defense",
+        "Section 498A IPC & Matrimonial Offense Defense",
         "Quashing Petitions (Section 482 CrPC / BNSS)",
-        "White Collar & Financial Offenses",
-        "FIR Consultation & Pre-trial Advisory",
+        "Appeals & Revisions before High Court",
+        "NDPS, Arms Act & Special Statute Trials",
       ],
     },
     {
       id: "civil-law",
       number: "02",
-      title: "Civil Law",
-      shortDesc: "Property disputes, contracts, family matters, consumer cases and more.",
+      title: "Civil & Property Disputes",
+      shortDesc: "Title suits, partition matters, land revenue, contracts and injunctions.",
       description:
-        "Strategic dispute resolution and litigation handling contentious property conflicts, contractual breach remedies, injunctions, and recovery proceedings.",
+        "Strategic dispute resolution and civil litigation handling ancestral land partitions, title declaration, temporary injunctions, and recovery proceedings.",
       iconName: "FileText",
       services: [
         "Title, Partition & Possession Suits",
-        "Breach of Contract & Specific Performance",
         "Temporary & Permanent Injunctions",
+        "Land Revenue, Mutation & Registry Disputes",
+        "Breach of Contract & Specific Performance",
         "Money Recovery & Execution Petitions",
         "Consumer Protection Litigation",
-        "Land Revenue & Mutation Matters",
       ],
     },
     {
       id: "constitutional-law",
       number: "03",
-      title: "Constitutional Law",
-      shortDesc: "Fundamental rights, public interest litigation and constitutional matters.",
+      title: "Constitutional & Writ Jurisdiction",
+      shortDesc: "Fundamental rights enforcement, police excess redress, and writ petitions.",
       description:
-        "Invoking extraordinary writ jurisdictions under Articles 226 and 32 of the Constitution of India for enforcement of fundamental freedoms and administrative redress.",
+        "Invoking extraordinary writ remedies before the Patna High Court under Article 226 of the Constitution of India for enforcement of fundamental liberties, arbitrary state actions, and custodial protections.",
       iconName: "Landmark",
       services: [
-        "Writ Petitions (Mandamus, Certiorari, Habeas Corpus)",
-        "Fundamental Rights Enforcement",
+        "Writ of Habeas Corpus & Illegal Detention",
+        "Writ of Mandamus for Administrative Inaction",
+        "Writ of Certiorari for Quashing Illegal Orders",
+        "Protection of Fundamental Freedoms",
         "Public Interest Litigation (PIL)",
-        "Challenge to Arbitrary Executive Actions",
-        "Judicial Review of Administrative Orders",
       ],
     },
     {
       id: "administrative-law",
       number: "04",
-      title: "Administrative Law",
-      shortDesc: "Service matters, government litigation and regulatory compliance.",
+      title: "Legal Aid & Pro Bono Defense",
+      shortDesc: "Statutory legal aid under DLSA / BSLSA for underprivileged undertrials.",
       description:
-        "Advocacy before Administrative Tribunals and the High Court concerning public employment disputes, disciplinary inquiries, pensions, and statutory compliance.",
+        "Institutional criminal defense counsel services provided under District Legal Services Authority (DLSA) Saran, ensuring that lack of financial resources never impedes equal access to justice.",
       iconName: "Building",
       services: [
-        "Service & Public Employment Disputes",
-        "Departmental Disciplinary Proceedings",
-        "Pensions, Seniority & Promotion Disputes",
-        "Statutory Authority & Regulatory Review",
-        "Government Tender & Procurement Disputes",
+        "LADCS Undertrial & Pre-Trial Representation",
+        "Bail & Remand Defense for Indigent Accused",
+        "Victim Compensation Scheme Assistance",
+        "Lok Adalat & Pre-litigation Dispute Redressal",
+        "Prison Legal Aid Clinics & Rights Counseling",
       ],
     },
     {
       id: "family-law",
       number: "05",
-      title: "Family Law",
-      shortDesc: "Marriage, divorce, maintenance, child custody and family disputes.",
+      title: "Matrimonial & Family Law",
+      shortDesc: "Divorce, maintenance claims, child custody, and domestic disputes.",
       description:
-        "Sensitive, balanced legal counsel dealing with matrimonial matters, mutual and contested divorce proceedings, custody arrangements, and domestic settlement agreements.",
+        "Balanced and empathetic counsel handling complex matrimonial conflicts, Section 125 CrPC maintenance claims, Domestic Violence Act proceedings, and custody petitions.",
       iconName: "Users",
       services: [
+        "Maintenance & Alimony Claims (Sec 125 CrPC)",
+        "Domestic Violence (DV Act) Proceedings",
         "Mutual Consent & Contested Divorce",
-        "Maintenance & Alimony Claims (Section 125)",
         "Child Custody & Guardianship Petitions",
-        "Domestic Violence Act Proceedings",
-        "Family Settlement & Inheritance Agreements",
+        "Pre-litigation Matrimonial Mediation",
       ],
     },
     {
       id: "corporate-law",
       number: "06",
-      title: "Corporate Law",
-      shortDesc: "Business contracts, agreements, legal advisory and corporate matters.",
+      title: "Commercial & Statutory Advisory",
+      shortDesc: "Business agreements, partnership deeds, and statutory compliance.",
       description:
-        "General legal advisory for enterprises, commercial contract drafting, commercial dispute settlement, and regulatory compliance guidance.",
+        "Legal advisory for local enterprises, traders, commercial contract drafting, partnership dispute settlements, and regulatory compliance.",
       iconName: "Briefcase",
       services: [
-        "Commercial Contracts & Master Service Agreements",
-        "Partnership Deeds & Corporate Governance",
-        "Vendor & Employment Agreement Structuring",
-        "Legal Due Diligence & Statutory Audits",
-        "Negotiation & Pre-litigation Mediation",
+        "Commercial Deeds & Partnership Agreements",
+        "Vendor & Employment Contract Drafting",
+        "Cheque Bounce Litigation (Section 138 NI Act)",
+        "Arbitration & Conciliation Proceedings",
+        "Pre-litigation Settlement & Mediation",
       ],
     },
   ] as PracticeArea[],
@@ -247,43 +402,43 @@ export const lawyerConfig = {
   experience: [
     {
       id: "exp-1",
-      period: "2020 – Present",
-      role: "Legal Practitioner",
-      organization: "High Court of Judicature & District Courts",
+      period: "2022 – Present",
+      role: "Assistant Legal Aid Defense Counsel (LADCS)",
+      organization: "District Legal Services Authority (DLSA), Saran at Chapra, Bihar",
       description:
-        "Independent practice representing individual and corporate clients in civil, criminal, and constitutional matters with an unyielding focus on legal equity and fair outcomes.",
-      badge: "Current Practice",
+        "Statutory appointment to provide institutional criminal trial defense for undertrials and marginalized citizens under the NALSA & BSLSA legal defense counsel framework. Handling trial courts, sessions arguments, and remand proceedings.",
+      badge: "Statutory Appointment",
       achievements: [
-        "Argued multiple writ petitions and statutory appeals before the High Court",
-        "Secured critical relief in complex property injunctions and bail petitions",
-        "Drafted pleadings for civil trials and constitutional challenges",
+        "Secured complete honorable acquittal (बाइज्जत बरी) in complex Trial Case 4197/26 (Sec 498A IPC)",
+        "Conducted extensive cross-examinations and witness scrutinies in Sessions & Magistrate Courts",
+        "Representing indigent undertrials across Saran district to protect constitutional fair trial guarantees",
       ],
     },
     {
       id: "exp-2",
-      period: "2017 – 2020",
-      role: "Junior Advocate",
-      organization: "Chambers of Senior Advocates, District Court, Gorakhpur",
+      period: "2018 – Present",
+      role: "Advocate & Litigation Practitioner",
+      organization: "District & Sessions Court, Saran at Chapra & Patna High Court Matters",
       description:
-        "Assisted leading senior advocates in extensive case preparation, statutory research, witness examination planning, and regular court proceedings.",
-      badge: "Apprenticeship",
+        "Independent practice representing clients in criminal trials, civil title disputes, bail hearings, matrimonial litigation, and writ petitions with strategic preparation and courtroom decorum.",
+      badge: "Active Practice",
       achievements: [
-        "Managed daily cause lists and prepared case briefs for over 250 trial matters",
-        "Conducted thorough precedents research using SCC, AIR, and Manupatra",
-        "Assisted during high-stakes sessions arguments and civil interrogatories",
+        "Argued numerous successful bail applications and stay motions across trial courts",
+        "Drafted pleadings, plaints, written statements, and revision petitions",
+        "Specialized cross-examination skills exposing inconsistencies in prosecution cases",
       ],
     },
     {
       id: "exp-3",
-      period: "2016 – 2017",
-      role: "Legal Intern",
-      organization: "District & Sessions Court",
+      period: "2023 – 2024",
+      role: "BSLSA Capacity Building & Legal Aid Delegate",
+      organization: "Bihar State Legal Services Authority (BSLSA), Patna",
       description:
-        "Gained direct, practical exposure to court filing procedures, registry protocols, legal drafting, and client briefing sessions.",
-      badge: "Foundational",
+        "Nominated for the intensive Training-cum-Sensitization Programme for Legal Aid Defense Counsels at Conference Hall, BSLSA Patna. Felicitated with Certificate of Participation by Member Secretary Ms. Shilpee Soniraj and Registrar Ms. Anupama.",
+      badge: "State Recognition",
       achievements: [
-        "Acquired foundational mastery over procedural laws (CPC, CrPC, Evidence Act)",
-        "Drafted notices, affidavits, vakalatnamas, and simple plaints",
+        "Comprehensive training in criminal trial advocacy, evidence appreciation, and victim compensation",
+        "Felicitated by senior judicial leadership and State Legal Services dignitaries",
       ],
     },
   ] as ExperienceItem[],
@@ -291,103 +446,102 @@ export const lawyerConfig = {
   education: [
     {
       degree: "LL.B. — Bachelor of Laws",
-      field: "Constitutional & Procedural Law",
-      institution: "Faculty of Law, Renowned State University",
-      year: "2016",
-      details: "First Class with Distinction; active participant in Moot Court Society.",
+      field: "Criminal Law, Evidence & Constitutional Jurisprudence",
+      institution: "Renowned University / Faculty of Law",
+      year: "2018",
+      details: "Comprehensive training in Indian Penal Code, Criminal Procedure, Evidence Act, and Civil Procedure.",
     },
     {
       degree: "B.A. — Bachelor of Arts",
-      field: "Political Science & Public Administration",
-      institution: "Faculty of Arts, University of Excellence",
-      year: "2013",
-      details: "Graduated with honors; specialized in Indian Constitutional Framework.",
+      field: "Political Science & Humanities",
+      institution: "University of Excellence",
+      year: "2015",
+      details: "In-depth study of Indian Constitutional Governance, Public Administration, and Legal History.",
     },
   ] as EducationItem[],
 
   achievements: [
     {
       id: "ach-1",
-      number: "100+",
-      title: "Successfully Handled Matters",
-      category: "Court Litigation",
+      number: "Acquittal",
+      title: "Complete Honorable Acquittal in Dowry Harassment Trial",
+      category: "Landmark Trial Victory",
       description:
-        "Represented clients across diverse trial and appellate litigation with rigorous preparation and principled advocacy.",
+        "Secured complete honorable exoneration (बाइज्जत बरी) for Chandan Kumar Singh in Trial Case 4197/26 (Section 498A IPC) before SDJM Sumit Kumar Singh. Highlighted in 'Hey Chapra' and 'Shubh Bhaskar'.",
       verified: true,
     },
     {
       id: "ach-2",
-      number: "Member",
-      title: "Bar Council of Uttar Pradesh",
-      category: "Professional Standing",
+      number: "LADCS",
+      title: "Assistant Legal Aid Defense Counsel Appointment",
+      category: "Public Service",
       description:
-        "Duly enrolled advocate entitled to practice across Indian courts under the Advocates Act, 1961.",
+        "Empaneled under District Legal Services Authority (DLSA), Saran at Chapra to provide robust criminal trial defense for undertrials and underprivileged citizens.",
       verified: true,
     },
     {
       id: "ach-3",
-      number: "Conducted",
-      title: "Legal Workshops & Seminars",
-      category: "Public Outreach & Continuing Legal Education",
+      number: "BSLSA",
+      title: "State Level Capacity Building Certification",
+      category: "Professional Honors",
       description:
-        "Regular participant and guest speaker at bar association seminars on trial procedures, constitutional remedies, and citizen rights.",
+        "Awarded Certificate of Participation by Member Secretary Ms. Shilpee Soniraj at the BSLSA State Conference Hall in Patna.",
       verified: true,
     },
     {
       id: "ach-4",
-      number: "Empaneled",
-      title: "Legal Aid & Pro Bono Counseling",
-      category: "Public Service",
+      number: "Enrolled",
+      title: "Bar Council of Bihar & Saran District Bar",
+      category: "Professional Standing",
       description:
-        "Dedicated allocation of monthly hours providing pro bono legal guidance to underprivileged litigants.",
+        "Enrolled advocate entitled to practice across Indian courts under the Advocates Act, 1961.",
       verified: true,
     },
   ] as AchievementItem[],
 
   values: {
-    title: "Dedicated. Experienced. Result-Oriented.",
+    title: "Principled. Fearless. Dedicated to Justice.",
     description:
-      "With a strong legal foundation and practical courtroom experience, I strive to deliver professional representation and thoughtful legal solutions with integrity, professionalism, and a deep understanding of the law.",
+      "Combining deep trial experience, procedural mastery, and institutional legal aid dedication, I strive to deliver robust legal protection and strategic representation for every citizen.",
     pillars: [
       {
-        title: "Rigorous Legal Research",
-        desc: "Every argument is grounded in binding statutory provisions and up-to-date judicial precedents.",
+        title: "Forensic Case Scrutiny",
+        desc: "Every trial defense is built on meticulous examination of the charge sheet, witness testimonies, and statutory discrepancies.",
       },
       {
-        title: "Uncompromising Ethics",
-        desc: "Clear legal advice without false guarantees or misleading assurances, adhering to the highest standards of the Bar.",
+        title: "Uncompromising Integrity",
+        desc: "Honest, realistic legal counsel with zero deceptive guarantees, adhering to the highest ethical traditions of the Bar.",
       },
       {
-        title: "Strategic Advocacy",
-        desc: "Tailoring procedural tactics and substantive claims to the unique dynamics of each court and bench.",
+        title: "Public Service Commitment",
+        desc: "Active defense counsel mandate under DLSA ensuring that economic hardship never deprives a person of a spirited defense.",
       },
     ],
   },
 
   contact: {
     eyebrow: "GET IN TOUCH",
-    title: "Let's Discuss Your Legal Matter",
+    title: "Schedule A Legal Consultation",
     subtitle:
-      "For legal consultation, case assessment, or procedural inquiries, please reach out via phone, email, or by scheduling an in-person chamber consultation.",
+      "For criminal defense assessment, bail hearings, civil litigation advisory, or legal aid inquiries, please reach out via phone, email, or visit the chamber at the Civil Court Complex.",
     phone: "+91 98765 43210",
-    email: "arjun.sharma@email.com",
-    address: "Chamber No. 42, Lawyers' Enclave, District Court Complex, Gorakhpur, Uttar Pradesh - 273001",
-    officeHours: "Monday to Saturday: 10:00 AM – 7:00 PM (Prior appointment recommended)",
+    email: "arman.ashrafi@email.com",
+    address: "Civil Court Complex, Saran at Chapra, Bihar - 841301",
+    officeHours: "Monday to Saturday: 10:00 AM – 6:30 PM (Prior appointment recommended)",
     notice:
-      "Disclaimer: In compliance with the rules of the Bar Council of India, this portfolio does not solicit clients or advertise services. Communication via this form does not automatically establish an advocate-client relationship until formally agreed upon.",
+      "Disclaimer: In compliance with the rules of the Bar Council of India, this portfolio does not solicit clients or advertise services. Communication via this website does not automatically establish an advocate-client relationship until formally agreed upon.",
   },
 
   social: {
     linkedin: "https://www.linkedin.com/in/",
     twitter: "https://twitter.com/",
-    // Only links with actual URLs will be shown
   },
 
   siteMetadata: {
-    siteName: "Adv. Arjun Sharma | Legal Practitioner",
-    title: "Adv. Arjun Sharma | Legal Practitioner | High Court & District Court",
+    siteName: "Adv. Arman Ashrafi | Assistant Legal Aid Defense Counsel & Advocate",
+    title: "Adv. Arman Ashrafi | LADCS Saran | District & High Court Litigation",
     description:
-      "Professional portfolio of Adv. Arjun Sharma, legal practitioner providing thoughtful legal consultation and strategic representation across civil, criminal, and constitutional matters.",
-    url: "https://adv-arjunsharma.legal",
+      "Official portfolio of Adv. Arman Ashrafi, Assistant Legal Aid Defense Counsel (LADCS) at DLSA Saran, practicing before District & Sessions Court, Saran at Chapra and Patna High Court.",
+    url: "https://adv-armanashrafi.legal",
   },
 };

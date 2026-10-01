@@ -5,6 +5,7 @@ import Button from "./Button";
 import { CheckCircle2, AlertCircle, ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { registerGSAP, prefersReducedMotion } from "@/lib/animations";
+import { lawyerConfig } from "@/lib/content";
 
 interface FormState {
   name: string;
@@ -144,7 +145,7 @@ export default function ContactForm() {
             Appointment Request Received
           </h4>
           <p className="text-xs text-[#66584F] leading-relaxed max-w-md mb-6">
-            Thank you for reaching out. Adv. Arjun Sharma’s chambers will review your procedural inquiry and contact you shortly regarding consultation availability.
+            Thank you for reaching out. {lawyerConfig.personal.fullName}’s chambers will review your procedural inquiry and contact you shortly regarding consultation availability.
           </p>
           <Button
             type="button"

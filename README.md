@@ -1,6 +1,6 @@
-# Adv. Arjun Sharma | Luxury Legal Practitioner Portfolio Website
+# Adv. Arman Ashrafi | Assistant Legal Aid Defense Counsel & Advocate
 
-An editorial, institutional digital presence built for **Adv. Arjun Sharma**, practicing before the **High Court of Judicature & District Courts**.
+An editorial, institutional digital presence built for **Adv. Arman Ashrafi**, Assistant Legal Aid Defense Counsel (LADCS) at **District Legal Services Authority (DLSA), Saran at Chapra, Bihar**, practicing before the **District & Sessions Court & Patna High Court**.
 
 Inspired by luxury legal editorial design:
 - **Palette**: Warm Alabaster Canvas (`#F8F5EE`), Pure White Card Panels (`#FFFFFF`), Hairline Sand Borders (`#E5DDD0`), Deep Roasted Espresso (`#2A1E17`), and Bronze Accents (`#9C7348`).
@@ -19,10 +19,11 @@ Inspired by luxury legal editorial design:
   - Professional Values & 3 Institutional Pillars
   - Career Timeline & Verified Standing highlights
   - Chamber Consultation Call to Action
-- **`/about`**: Full professional profile, constitutional philosophy, academic foundation (LL.B. & B.A.), and Bar Council compliance.
-- **`/practice-areas`**: Detailed breakdown of 6 core litigation fields (Criminal Defense, Civil & Property, Constitutional Writs, Administrative & Service, Family & Matrimonial, Corporate Advisory).
-- **`/experience`**: Chronological court experience timeline with interactive ScrollTrigger progression, and breakdown of appearance forums (High Court, District Courts, Revenue Tribunals).
-- **`/achievements`**: Verified bar standing, case milestones, legal outreach seminars, and continuing legal education.
+- **`/gallery`**: Interactive photo archive & press coverage with category filter pills, GSAP staggered layout, and full-screen lightbox modal.
+- **`/about`**: Full professional profile, LADCS appointment, constitutional philosophy, and Bar Council of Bihar standing.
+- **`/practice-areas`**: Detailed breakdown of 6 core litigation fields (Criminal Trial Defense, Civil & Property, Constitutional Writs, Legal Aid & Pro Bono, Family & Matrimonial, Commercial Advisory).
+- **`/experience`**: Chronological court experience timeline with interactive ScrollTrigger progression, and breakdown of appearance forums (High Court, District Courts, DLSA).
+- **`/achievements`**: Verified bar standing, landmark criminal trial acquittals (Sec 498A IPC), BSLSA State Capacity Building certifications.
 - **`/contact`**: Chamber address, consultation hours, interactive form with client-side validation and API endpoint, styled judicial map, and Bar Council statutory disclaimer.
 - **`/_not-found`**: Institutional 404 page with return options.
 - **`/sitemap.xml`** & **`/robots.txt`**: Automated search engine optimization.

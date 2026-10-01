@@ -9,7 +9,7 @@ import { Landmark, Scale, FileText } from "lucide-react";
 export const metadata: Metadata = {
   title: "Professional Experience | Court Litigation Timeline",
   description:
-    "Chronological courtroom experience of Adv. Arjun Sharma spanning independent practice before the High Court and District Courts, senior chambers apprenticeship, and foundational judicial internships.",
+    "Chronological courtroom experience of Adv. Arman Ashrafi spanning Assistant Legal Aid Defense Counsel (LADCS) appointment at DLSA Saran, criminal trial defense, and Patna High Court litigation.",
 };
 
 export default function ExperiencePage() {
@@ -72,7 +72,7 @@ export default function ExperiencePage() {
                 District & Sessions Courts
               </h3>
               <p className="text-xs text-[#66584F] leading-relaxed mb-4">
-                District Courts Complex, Gorakhpur and surrounding territorial divisions.
+                Civil Court Complex, Saran at Chapra and surrounding territorial divisions.
               </p>
               <ul className="text-xs text-[#66584F] space-y-1.5 border-t border-[#E5DDD0] pt-3">
                 <li>• Sessions Trials & Regular Bail Hearings</li>

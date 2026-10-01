@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://adv-arjunsharma.legal/sitemap.xml",
+    sitemap: "https://adv-armanashrafi.legal/sitemap.xml",
   };
 }

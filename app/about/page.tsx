@@ -7,9 +7,9 @@ import { lawyerConfig } from "@/lib/content";
 import { Scale, Shield, CheckCircle, GraduationCap, Award, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Me | Professional Profile & Legal Philosophy",
+  title: "About | Adv. Arman Ashrafi | LADCS & Legal Practitioner",
   description:
-    "Learn about Adv. Arjun Sharma's background, legal education, court litigation philosophy, and dedication to justice before the High Court and District Courts.",
+    "Learn about Adv. Arman Ashrafi's background, Assistant Legal Aid Defense Counsel (LADCS) appointment, courtroom litigation, and criminal defense milestones in Saran and Patna High Court.",
 };
 
 export default function AboutPage() {
@@ -17,9 +17,9 @@ export default function AboutPage() {
     <div className="flex flex-col w-full">
       {/* Page Hero */}
       <PageHero
-        title="About Advocate Arjun Sharma"
-        subtitle="Dedicated legal counsel, constitutional ethics, and seasoned litigation before the High Court & District Courts."
-        breadcrumb="About Me"
+        title="About Advocate Arman Ashrafi"
+        subtitle="Assistant Legal Aid Defense Counsel (LADCS), criminal defense advocate, and dedicated defender of constitutional rights."
+        breadcrumb="About"
         backgroundImage="/images/court-building.jpg"
       />
 

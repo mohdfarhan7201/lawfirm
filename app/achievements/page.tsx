@@ -9,7 +9,7 @@ import { ShieldCheck, Award, BookOpen, Users } from "lucide-react";
 export const metadata: Metadata = {
   title: "Achievements & Standing | Verified Legal Credentials",
   description:
-    "Verified professional standing, bar council membership, litigation record, and legal outreach seminars conducted by Adv. Arjun Sharma.",
+    "Verified professional standing, Bar Council of Bihar membership, LADCS appointment, landmark trial acquittals, and BSLSA honors of Adv. Arman Ashrafi.",
 };
 
 export default function AchievementsPage() {

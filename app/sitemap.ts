@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://adv-arjunsharma.legal";
+  const baseUrl = "https://adv-armanashrafi.legal";
   const lastModified = new Date();
 
   const routes = [
@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/practice-areas",
     "/experience",
     "/achievements",
+    "/gallery",
     "/contact",
   ];
 

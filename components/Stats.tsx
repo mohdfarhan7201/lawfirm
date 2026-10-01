@@ -120,7 +120,7 @@ export default function Stats() {
           className="max-w-4xl mx-auto text-center font-serif text-2xl sm:text-4xl md:text-5xl lg:text-[46px] leading-[1.26] tracking-tight mb-16 sm:mb-24 px-4"
         >
           <span className="text-[#968980] font-light">
-            At Chambers of Adv. Arjun Sharma, We Deliver Smart Legal Solutions Through Expertise,
+            At Chambers of Adv. Arman Ashrafi, We Deliver Principled Legal Defense Through Expertise,
             Precision, And A Client{" "}
           </span>
           <span className="text-[#2A1E17] font-semibold">
