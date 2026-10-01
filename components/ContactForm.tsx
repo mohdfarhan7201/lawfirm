@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Button from "./Button";
 import { CheckCircle2, AlertCircle, ArrowUpRight } from "lucide-react";
+import gsap from "gsap";
+import { registerGSAP, prefersReducedMotion } from "@/lib/animations";
 
 interface FormState {
   name: string;
@@ -21,6 +23,30 @@ interface FormErrors {
 }
 
 export default function ContactForm() {
+  const formCardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    registerGSAP();
+    if (prefersReducedMotion()) return;
+
+    if (formCardRef.current) {
+      gsap.fromTo(
+        formCardRef.current,
+        { opacity: 0, y: 35 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: formCardRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+    }
+  }, []);
+
   const [formData, setFormData] = useState<FormState>({
     name: "",
     email: "",
@@ -103,7 +129,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-[#FFFFFF] border border-[#E5DDD0] p-8 sm:p-10 shadow-sm relative text-[#2A1E17]">
+    <div ref={formCardRef} className="bg-[#FFFFFF] border border-[#E5DDD0] p-8 sm:p-10 shadow-sm relative text-[#2A1E17]">
       <h3 className="font-serif text-2xl md:text-3xl text-[#2A1E17] font-bold mb-2">
         Schedule A Consultation
       </h3>

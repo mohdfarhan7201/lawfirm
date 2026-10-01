@@ -1,7 +1,10 @@
-import React from "react";
-import Image from "next/image";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import gsap from "gsap";
+import { registerGSAP, prefersReducedMotion } from "@/lib/animations";
 
 interface PageHeroProps {
   title: string;
@@ -15,10 +18,63 @@ export default function PageHero({
   subtitle,
   breadcrumb,
 }: PageHeroProps) {
+  const heroRef = useRef<HTMLElement>(null);
+  const watermarkRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    registerGSAP();
+    if (prefersReducedMotion()) return;
+
+    const ctx = gsap.context(() => {
+      // Watermark entrance and scroll parallax
+      if (watermarkRef.current) {
+        gsap.fromTo(
+          watermarkRef.current,
+          { opacity: 0, scale: 0.85 },
+          { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" }
+        );
+
+        gsap.to(watermarkRef.current, {
+          y: -40,
+          scale: 1.06,
+          ease: "none",
+          scrollTrigger: {
+            trigger: heroRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.7,
+          },
+        });
+      }
+
+      // Staggered text entrance
+      if (contentRef.current) {
+        gsap.fromTo(
+          contentRef.current.children,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.85,
+            stagger: 0.12,
+            ease: "power3.out",
+          }
+        );
+      }
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative w-full pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden bg-[#F8F5EE] border-b border-[#E5DDD0]">
+    <section
+      ref={heroRef}
+      className="relative w-full pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden bg-[#F8F5EE] border-b border-[#E5DDD0]"
+    >
       {/* Giant Ghost Watermark Typography */}
       <div
+        ref={watermarkRef}
         aria-hidden="true"
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
       >
@@ -28,7 +84,10 @@ export default function PageHero({
       </div>
 
       {/* Content Container */}
-      <div className="container-custom relative z-10 text-center flex flex-col items-center">
+      <div
+        ref={contentRef}
+        className="container-custom relative z-10 text-center flex flex-col items-center"
+      >
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"
