@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import CustomCursor from "@/components/CustomCursor";
-import Preloader from "@/components/Preloader";
 import { lawyerConfig } from "@/lib/content";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -82,9 +81,6 @@ export default function RootLayout({
       className={`${cormorantGaramond.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F8F5EE] text-[#2A1E17] font-sans overflow-x-hidden">
-        {/* Preloader */}
-        <Preloader />
-
         {/* Global Progress Bar */}
         <ScrollProgress />
 

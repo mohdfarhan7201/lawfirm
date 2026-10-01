@@ -23,50 +23,21 @@ export default function Hero() {
     if (prefersReducedMotion()) return;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.15 });
+      const tl = gsap.timeline({ delay: 0.1 });
 
-      // 1. Headline reveal with smooth word lift
-      if (headlineRef.current) {
-        tl.fromTo(
-          headlineRef.current,
-          { opacity: 0, y: 40 },
-          { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
-        );
-      }
-
-      // 2. Subtitle fade up
-      if (subtitleRef.current) {
-        tl.fromTo(
-          subtitleRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
-          "-=0.6"
-        );
-      }
-
-      // 3. CTA button pop with subtle spring
-      if (ctaRef.current) {
-        tl.fromTo(
-          ctaRef.current,
-          { opacity: 0, scale: 0.9, y: 15 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.5)" },
-          "-=0.45"
-        );
-      }
-
-      // 4. Watermark & Statue reveal
+      // 1. Watermark background emergence
       if (watermarkRef.current) {
         tl.fromTo(
           watermarkRef.current,
-          { opacity: 0, scale: 0.88 },
-          { opacity: 1, scale: 1, duration: 1.4, ease: "power2.out" },
-          "-=0.6"
+          { opacity: 0, scale: 0.82 },
+          { opacity: 0.55, scale: 1, duration: 1.5, ease: "power2.out" },
+          0
         );
 
-        // Watermark slow parallax zoom
+        // Watermark slow parallax zoom on scroll
         gsap.to(watermarkRef.current, {
           y: -50,
-          scale: 1.05,
+          scale: 1.06,
           ease: "none",
           scrollTrigger: {
             trigger: heroRef.current,
@@ -77,28 +48,29 @@ export default function Hero() {
         });
       }
 
+      // 2. Statue majestic rise from bottom
       if (statueRef.current) {
         tl.fromTo(
           statueRef.current,
-          { opacity: 0, y: 60, scale: 0.94 },
+          { opacity: 0, y: 90, scale: 0.92 },
           {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 1.2,
+            duration: 1.4,
             ease: "power3.out",
             onComplete: () => {
-              // Gentle floating breathing animation
+              // Continuous smooth breathing floating physics
               gsap.to(statueRef.current, {
-                y: -10,
-                duration: 3.2,
+                y: -12,
+                duration: 3.5,
                 repeat: -1,
                 yoyo: true,
                 ease: "sine.inOut",
               });
             },
           },
-          "-=1.1"
+          0.1
         );
 
         // Parallax scrub on scroll
@@ -114,22 +86,59 @@ export default function Hero() {
         });
       }
 
-      // 5. Left & right annotations
+      // 3. Headline words reveal from behind overflow masks
+      const words = headlineRef.current?.querySelectorAll(".hero-word");
+      if (words && words.length > 0) {
+        tl.fromTo(
+          words,
+          { y: "120%", opacity: 0 },
+          {
+            y: "0%",
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.08,
+            ease: "power4.out",
+          },
+          0.2
+        );
+      }
+
+      // 4. Subtitle smooth slide-up
+      if (subtitleRef.current) {
+        tl.fromTo(
+          subtitleRef.current,
+          { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.85, ease: "power3.out" },
+          0.65
+        );
+      }
+
+      // 5. CTA Button with elegant spring pop
+      if (ctaRef.current) {
+        tl.fromTo(
+          ctaRef.current,
+          { opacity: 0, scale: 0.88, y: 18 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "back.out(1.8)" },
+          0.8
+        );
+      }
+
+      // 6. Left & right floating annotations
       if (leftCardRef.current) {
         tl.fromTo(
           leftCardRef.current,
-          { opacity: 0, x: -35 },
-          { opacity: 1, x: 0, duration: 0.85, ease: "power2.out" },
-          "-=0.7"
+          { opacity: 0, x: -45 },
+          { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" },
+          0.9
         );
       }
 
       if (rightBadgesRef.current) {
         tl.fromTo(
           rightBadgesRef.current.children,
-          { opacity: 0, x: 35 },
-          { opacity: 1, x: 0, duration: 0.85, stagger: 0.15, ease: "power2.out" },
-          "-=0.7"
+          { opacity: 0, x: 45 },
+          { opacity: 1, x: 0, duration: 0.9, stagger: 0.15, ease: "power3.out" },
+          0.9
         );
       }
     }, heroRef);
@@ -137,18 +146,31 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
+  const headlineWords = [
+    "YOUR",
+    "LEGAL",
+    "PARTNER",
+    "IN",
+    "EVERY",
+    "SITUATION",
+  ];
+
   return (
     <section
       ref={heroRef}
       className="relative min-h-screen w-full bg-[#F8F5EE] text-[#2A1E17] pt-28 sm:pt-36 md:pt-40 pb-16 overflow-hidden flex flex-col justify-between"
     >
       <div className="container-custom relative z-10 flex flex-col items-center text-center">
-        {/* Main Hero Headline - LexCore Bold All-Caps */}
+        {/* Main Hero Headline - LexCore Bold All-Caps with Word Masking */}
         <h1
           ref={headlineRef}
-          className="font-serif font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] text-[#2A1E17] tracking-tight leading-[1.06] uppercase max-w-5xl mx-auto mb-5"
+          className="font-serif font-bold text-3xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] text-[#2A1E17] tracking-tight leading-[1.06] uppercase max-w-5xl mx-auto mb-5 flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1"
         >
-          Your Legal Partner in Every Situation
+          {headlineWords.map((word, i) => (
+            <span key={i} className="inline-block overflow-hidden pb-1">
+              <span className="hero-word inline-block">{word}</span>
+            </span>
+          ))}
         </h1>
 
         {/* Subtitle */}
